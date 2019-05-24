@@ -1,6 +1,6 @@
 package sqlxutils
 
-import "github.com/jmoiron/sqlx" 
+import "github.com/jmoiron/sqlx"
 
 /*
  * Statement Preparer
