@@ -75,3 +75,11 @@ Create a `*sqlx.DB` connection with some default connection information tailored
 ```golang
 db := sqlxutils.MustConnect(sqlxutils.NewPostgresConfig("localhost:5432"))
 ```
+
+## Easily JSON a HTTP response
+
+Package         |   Utility               |
+----------------|-------------------------|
+`jsonutils`     | `JSONify`               |
+
+Sets the `Content-Type` header to `application/json`, the relevant response code and marshals the input to JSON binary.
