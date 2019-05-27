@@ -62,3 +62,16 @@ Package         |   Utility               |
 `middleware`    | `RequestID`             |
 
 Add a unique identifier to requests (useful for logging etc.) if the Request does not already have one. Access later by using the `RequestIDHeader` variable header name e.g. `request.Header.Get(RequestIDHeader)`
+
+## Database connections with Exponential Back-off
+
+Package         |   Utility               |
+----------------|-------------------------|
+`sqlxutils`     | `MustConnect`           |
+`sqlxutils`     | `NewPostgresConfig`     |
+
+Create a `*sqlx.DB` connection with some default connection information tailored for PostgreSQL with the `NewPostgresConfig` helper.
+
+```golang
+db := sqlxutils.MustConnect(sqlxutils.NewPostgresConfig("localhost:5432"))
+```
