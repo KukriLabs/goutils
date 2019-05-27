@@ -54,3 +54,11 @@ Package         |   Utility               |
 `urlutils`      | `MustParseURL`          |
 
 Make sure a URL is successfully parsed or panic doing so.
+
+## Add a `X-Request-ID` header to requests
+
+Package         |   Utility               |
+----------------|-------------------------|
+`middleware`    | `RequestID`             |
+
+Add a unique identifier to requests (useful for logging etc.) if the Request does not already have one. Access later by using the `RequestIDHeader` variable header name e.g. `request.Header.Get(RequestIDHeader)`
