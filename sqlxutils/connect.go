@@ -6,6 +6,7 @@ import (
 	"time"
 
 	"github.com/jmoiron/sqlx"
+	_ "github.com/lib/pq"
 )
 
 // NewPostgresConfig is a simple helper to build *ConnectionConfig with some sane defaults
