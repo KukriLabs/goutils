@@ -83,3 +83,19 @@ Package         |   Utility               |
 `jsonutils`     | `JSONify`               |
 
 Sets the `Content-Type` header to `application/json`, the relevant response code and marshals the input to JSON binary.
+
+## Return a JSON "NotImplemented" response
+
+Package         |   Utility               |
+----------------|-------------------------|
+`httputils`     | `NotImplemented`        |
+
+Returns a `HTTP 501` response with a JSON "not implemented" message for stub endpoints
+
+## Remove empty/white space strings from an array
+
+Package         |   Utility               |
+----------------|-------------------------|
+`arrays`        | `TrimEmptyStrings`      |
+
+Takes an input array of strings and returns an array with all empty or white space strings removed.
