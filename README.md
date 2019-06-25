@@ -82,7 +82,15 @@ Package         |   Utility               |
 ----------------|-------------------------|
 `jsonutils`     | `JSONify`               |
 
-Sets the `Content-Type` header to `application/json`, the relevant response code and marshals the input to JSON binary.
+Sets the `Content-Type` header to `application/json`, the relevant response code and marshals the input to JSON binary
+
+## Unified Error Message `struct` for JSON responses
+
+Package         |   Utility               |
+----------------|-------------------------|
+`jsonutils`     | `ErrorMessage`          |
+
+Useful with the `JSONify` function to provide a uniform error message envelope
 
 ## Return a JSON "NotImplemented" response
 
