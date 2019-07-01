@@ -22,6 +22,14 @@ func (s *Stmt) Prepare(db *sqlx.DB, query string) *sqlx.Stmt {
 	return s.stmt
 }
 
+func (s *Stmt) PrepareTx(tx *sqlx.Tx, query string) *sqlx.Stmt {
+	if s.err != nil {
+		return nil
+	}
+	s.stmt, s.err = tx.Preparex(query)
+	return s.stmt
+}
+
 func (s *Stmt) Error() error {
 	return s.err
 }
@@ -43,6 +51,14 @@ func (ns *NamedStmt) Prepare(db *sqlx.DB, query string) *sqlx.NamedStmt {
 		return nil
 	}
 	ns.stmt, ns.err = db.PrepareNamed(query)
+	return ns.stmt
+}
+
+func (ns *NamedStmt) PrepareTx(tx *sqlx.Tx, query string) *sqlx.NamedStmt {
+	if ns.err != nil {
+		return nil
+	}
+	ns.stmt, ns.err = tx.PrepareNamed(query)
 	return ns.stmt
 }
 
