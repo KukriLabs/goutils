@@ -107,3 +107,11 @@ Package         |   Utility               |
 `arrays`        | `TrimEmptyStrings`      |
 
 Takes an input array of strings and returns an array with all empty or white space strings removed.
+
+## Generate a string of a random length
+
+Package         |   Utility               |
+----------------|-------------------------|
+`stringutils`   | `RandString`            |
+
+Takes an input integer `n` and outputs a random alphanumeric string of length `n`
